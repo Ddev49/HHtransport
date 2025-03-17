@@ -20,12 +20,12 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Liens utiles</h3>
           <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/formules">Formules</a></li>
-            <li><a href="/contact">Contact </a></li>
-            <li><a href="/HHTransport">Qui sommes-nous</a></li>
-            <li><a href="/eco_depot">Eco Depôt</a></li>
-            <li><a href="/blogs">Blogs</a></li>
+            <li><Link href="/">Accueil</Link></li>
+            <li><Link href="/formules">Formules</Link></li>
+            <li><Link href="/contact">Contact </Link></li>
+            <li><Link href="/HHTransport">Qui sommes-nous</Link></li>
+            <li><Link href="/eco_depot">Eco Depôt</Link></li>
+            <li><Link href="/blogs">Blogs</Link></li>
           </ul>
         </div>
         
