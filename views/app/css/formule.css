@@ -235,6 +235,9 @@
     font-size: 1rem;
     padding: 12px;
   }
+  .admin-gestions-submit-btn  {
+    background: #2563eb;
+  }
   /* ==========================
    📱 RESPONSIVE DESIGN
   =========================== */
