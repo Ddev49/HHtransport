@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "install-all": "npm install && cd views && npm install",
-    "build": "cd views && npm install && npm run build",
+    "build": "cd views && npm install && next build",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
