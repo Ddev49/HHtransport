@@ -1,0 +1,302 @@
+seo
+email de admin
+essayer de faire apparaitre la navbar progressivement
+couleur de navbar
+verifier le backend et la securite et erreur
+https://cloud.mongodb.com/ base de donner
+https://www.npmjs.com/package/next-seo
+https://www.pexels.com/fr-fr/chercher/demenagement/ site image
+https://profero-demenagement.com/category/faq/ site a faire pareil
+
+/*
+quand un login est connecter qui ne peut pas re aller a la page login //
+Ajouter la gestion du profil admin
+
+Modifier l’email, le mot de passe, ou le numéro de téléphone de l’admin
+Ajouter un bouton "Déconnexion"
+
+Créer une page Contact avec un formulaire qui envoie un email //
+Ajouter Nodemailer pour que l’admin reçoive un mail
+Ajouter une confirmation d’envoi pour l’utilisateur
+
+cree page blog seul //
+
+ajouter une page qui somme nous
+
+ajouter une page ou une zone de texte qui fais que il recupere le materielle
+
+4️⃣ Créer la page "Formules" //
+
+Ajouter un bouton pour envoyer une demande de devis
+
+reinitialisation mots de passe
+
+page 404
+Afficher différentes options de services //
+
+faire le font bien
+
+
+
+
+pasons au design des page de facons a ce quel soit modern professionnel elegant attrayant faissant confiance et professionnel
+
+ici voici ma page login
+
+"use client";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import { usePageTitle } from '@/utils/usePageTitle';
+
+export default function Login() {
+usePageTitle('Connection Administrateur -'); // Titre de la Page a utiliser si ma page utiliser use client
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [error, setError] = useState("");
+const [loading, setLoading] = useState(true);
+const router = useRouter();
+
+useEffect(() => {
+const checkAuth = async () => {
+try {
+const response = await axios.get("/api/admin/verify-token", { withCredentials: true });
+if (response.data.valid) {
+router.replace("/admin");
+}
+}catch(e){
+// erreur silencieuse
+} finally {
+setLoading(false);
+}
+};
+checkAuth();
+// 🔥 Récupérer le message d'erreur depuis sessionStorage
+const loginError = sessionStorage.getItem("loginError");
+if (loginError) {
+setError(loginError);
+sessionStorage.removeItem("loginError"); // 🔥 Supprimer l'erreur après affichage
+}
+}, [router])
+
+const handleLogin = async (e) => {
+e.preventDefault();
+try {
+await axios.post("/api/admin/login", { email, password }, { withCredentials: true });
+router.push("/admin");
+} catch (err) {
+setError(err.response?.data?.error || "Erreur lors de la connexion.");
+}
+};
+if (loading) return null;
+return (
+<div className="login-page">
+{/_ Bloc d'informations _/}
+<div className="login-info">
+<h2>Bienvenue sur l'espace administrateur</h2>
+<p>Accédez à votre tableau de bord et gérez votre contenu en toute simplicité.</p>
+<p><strong>Besoin d'aide ?</strong> Contactez notre support.</p>
+</div>
+
+      {/* Formulaire de connexion */}
+      <div className="login-form">
+        <h2>Connexion Admin</h2>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleLogin}>
+          <label>Email <span className="required">*</span></label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Votre email..." />
+
+          <label>Mot de passe <span className="required">*</span></label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Votre mot de passe..." />
+
+          <button type="submit">Se connecter</button>
+        </form>
+        <p className="forgot-password">
+          <a href="/reset-password">Mot de passe oublié ?</a>
+        </p>
+      </div>
+    </div>
+
+);
+}qui a comme css
+/_ ================== PAGE LOGIN ================== _/
+.login-page {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1000px;
+margin: 50px auto;
+padding: 20px;
+gap: 30px;
+}
+
+/_ Bloc d'infos _/
+.login-info {
+flex: 1;
+padding: 25px;
+background: #f0f9f4;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+min-width: 40%;
+text-align: center;
+}
+
+.login-info h2 {
+font-size: 1.8rem;
+color: #2563eb;
+margin-bottom: 15px;
+}
+
+.login-info p {
+font-size: 1rem;
+line-height: 1.5;
+margin-bottom: 10px;
+}
+
+/_ Formulaire de connexion _/
+.login-form {
+flex: 1;
+padding: 25px;
+background: #fff5f5;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+min-width: 40%;
+text-align: center;
+}
+
+.login-form h2 {
+font-size: 1.8rem;
+color: #2563eb;
+margin-bottom: 15px;
+}
+
+.login-form form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.login-form label {
+font-weight: 500;
+font-size: 1rem;
+color: #333;
+text-align: left;
+}
+
+.login-form input {
+width: 90%;
+padding: 12px;
+border: none;
+border-bottom: 2px solid black;
+font-size: 1rem;
+background: transparent;
+transition: all 0.3s ease-in-out;
+}
+
+.login-form input::placeholder {
+color: #999;
+font-style: italic;
+}
+
+.login-form input:focus {
+border-color: #2563eb;
+outline: none;
+}
+
+/_ Bouton _/
+.login-form button {
+width: 100%;
+padding: 14px;
+background: #2563eb;
+color: white;
+border: none;
+font-size: 1.1rem;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+.login-form button:hover {
+background: #1e4bb6;
+transform: scale(1.01);
+}
+
+/_ Lien "Mot de passe oublié" _/
+.forgot-password {
+margin-top: 10px;
+}
+
+.forgot-password a {
+color: #2563eb;
+text-decoration: none;
+font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+text-decoration: underline;
+}
+
+/_ Message d'erreur _/
+.error-message {
+background: #f8d7da;
+color: #721c24;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+/_ Responsive _/
+@media (max-width: 768px) {
+.login-page {
+flex-direction: column;
+align-items: center;
+}
+
+.login-info, .login-form {
+min-width: 100%;
+}
+}
+fais moi un peu pres le meme design que le form pour cet page
+"use client";
+import { useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
+export default function ResetPassword() {
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+const [error, setError] = useState("");
+const router = useRouter();
+
+const handleSubmit = async (e) => {
+e.preventDefault();
+setMessage("");
+setError("");
+
+    try {
+      const res = await axios.post("/api/admin/reset-password", { email });
+      setMessage(res.data.message);
+      setTimeout(() => router.push("/login"), 3000); // Redirection après 3 secondes
+    } catch (err) {
+      setError("Erreur lors de la demande de réinitialisation.");
+    }
+
+};
+
+return (
+<main className="reset-password-container">
+<h2>Mot de passe oublié</h2>
+<p>Entrez votre adresse e-mail pour recevoir un lien de réinitialisation.</p>
+
+      {message && <p className="success-message">{message}</p>}
+      {error && <p className="error-message">{error}</p>}
+
+      <form onSubmit={handleSubmit}>
+        <label>Email :</label>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <a href="/login" className="back-link">Retour à la connexion</a>
+    </main>
+
+);
+}

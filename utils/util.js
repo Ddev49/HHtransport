@@ -1,0 +1,1 @@
+// definir des fonction a utiliser partout dans le programme

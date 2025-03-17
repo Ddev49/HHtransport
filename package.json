@@ -1,0 +1,34 @@
+{
+  "name": "hhtransport",
+  "version": "1.0.0",
+  "description": "Demenagement et transport, en nodejs et react seulement un administrateur pour s'occuper des blog et font en react mais dans le view",
+  "license": "ISC",
+  "author": "DevDjo",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "install-all": "npm install && cd views && npm install",
+    "build": "cd views && npm run build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "next": "^15.1.7",
+    "nodemailer": "^6.10.0",
+    "path": "^0.12.7",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "webpack-bundle-analyzer": "^4.10.2"
+  }
+}

@@ -134,3 +134,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Fichiers et dossiers à ignorer
+.env
+node_modules
+views/.next
+views/node_modules
+.DS_Store
+>>>>>>> c8a0e07 (Premier envoi du projet sur GitHub)
