@@ -14,10 +14,10 @@ const Navbar = () => {
         
         {/* Logo + Slogan */}
         <div className="flex items-center space-x-2">
-            <a href="/">
+            <Link href="/">
               <img src="/hhlogo2.png" alt="Logo" className="navbar-logo" />
               <img src="/hhslogan2.png" alt="Slogan" className="navbar-logo hidden" />
-            </a>
+            </Link>
         </div>
 
         {/* Navigation Desktop */}

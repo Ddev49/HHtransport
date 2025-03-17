@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useSettings } from "@/context/SettingsContext";
+import Link from "next/link";
 import axios from "axios";
 
 const Footer = () => {
