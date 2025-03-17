@@ -1,0 +1,512 @@
+
+/* ================== MOT DE PASSE OUBLIÉ ================== */
+.reset-password-container, .new-password-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .reset-password-container h2, .new-password-container h2 {
+    color: #333;
+  }
+  
+  .reset-password-container form, .new-password-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reset-password-container input, .new-password-container input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .reset-password-container button, .new-password-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reset-password-container button:hover, .new-password-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .forgot-password-link {
+    display: block;
+    margin-top: 10px;
+    color: red;
+    text-decoration: none;
+  }
+  /* ================== ADMIN DASHBOARD ================== */
+  .admin-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Boîte de bienvenue */
+  .admin-welcome {
+    background: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+  }
+  
+  .admin-welcome h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .admin-welcome p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Section des boutons */
+  .admin-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .admin-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .admin-button:hover {
+    background: #1e4bb8;
+    transform: scale(1.015
+    );
+  }
+  
+  .button-label {
+    font-weight: bold;
+  }
+  
+  .button-desc {
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  /* ================== GESTIONS DE L'ADMIN (OPTION BLOGS) ================== */
+  .options{
+    background: #fffef2;
+  }
+  .edit-blog{
+    background: #faf2ff;
+  }
+  .create-blog{
+    background: #f6fdec;
+  }
+  .read-blog{
+    background: #f3f0ce;
+  }
+  .engagement{
+    background:#e6f5d9; 
+  }
+  .admin-gestions-container.engagement .admin-title{
+  color: darkgreen;
+  }
+  .not-found{
+    background: #c29292;
+  }
+  .blog-card {
+    background: #e9f8f4;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  .admin-gestions-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow:hidden ;
+    word-wrap: break-word;
+  }
+  @media (max-width: 850px) {
+    .admin-gestions-container {
+      margin: 40px 15px;
+      padding: 5px;
+    }
+  }
+  .admin-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .admin-gestions-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-gestions-section {
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow:hidden ;
+  }
+  
+  .admin-gestions-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .admin-gestions-form textarea {
+    width: 90%;
+    padding: 12px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+    background: transparent;
+    resize: vertical;
+    min-height: 40px;
+    height: 3px;
+  }
+  
+  .admin-gestions-form input[type="text"],
+  .admin-gestions-form input[type="email"],
+  .admin-gestions-form input[type="tel"],
+  .admin-gestions-form input[type="color"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+    background: transparent;
+  }
+  
+  .admin-gestions-form input[type="color"] {
+    padding: 5px;
+    height: 40px;
+    border: none;
+  }
+  
+  .admin-gestions-form label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+    font-style: italic;
+  }
+  
+  .button-container {
+    display: flex;
+    align-items: stretch; /* force les boutons à avoir la même hauteur */
+  }
+  
+  .admin-gestions-submit-btn.width{
+    width: 100%;
+  }
+  
+  .admin-gestions-submit-btn , .admin-gestions-cancel-btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 50%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+  .admin-gestions-submit-btn2 , .admin-gestions-cancel-btn2 {
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 50%;
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 20px 0;
+  
+  }
+  .admin-gestions-submit-btn ,.admin-gestions-submit-btn2 {
+    background: #2563eb;
+  }
+  .admin-gestions-cancel-btn , .admin-gestions-cancel-btn2{
+    background: #ff5555;
+  }
+  .admin-gestions-submit-btn:hover , .admin-gestions-submit-btn2:hover{
+    background: #1d4ed8;
+  }
+  .admin-gestions-cancel-btn:hover , .admin-gestions-cancel-btn2:hover {
+    background: #f51f1f;
+  }
+  
+  .admin-success-message {
+    color: green;
+    text-align: center;
+  }
+  
+  .admin-error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  /* ================== PAGE PROFIL ADMIN ================== */
+  .profile-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  .profile-info {
+    flex: 1;
+    padding: 25px;
+    background: #f0f9f4;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 40%;
+    overflow: hidden;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.8rem;
+    color: #2563eb;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .profile-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .profile-form {
+    flex: 1;
+    padding: 25px;
+    background: #fff5f5;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 40%;
+    overflow: hidden;
+  }
+  
+  .profile-form h2 {
+    font-size: 1.8rem;
+    color: #2563eb;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .profile-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .profile-form input {
+    width: 90%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .profile-form input::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  
+  .profile-form input:focus {
+    border-color: #2563eb;
+    outline: none;
+  }
+  
+  .profile-form button {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .profile-form button:hover {
+    background: #1e4bb6;
+    transform: scale(1.01);
+  }
+  
+  .response-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .success {
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .error {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+/* ====== Page de réinitialisation du mot de passe ====== */
+.new-password-container {
+    max-width: 400px;
+    text-align: left;
+    margin: 5% auto;
+    padding: 2rem;
+    background: #faf6f8; /* ✅ Fond légèrement rosé */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 10rem;
+  }
+  
+  .new-password-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* ✅ Champ de saisie */
+  .password-form .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .password-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .password-form input:focus {
+    border-color: #2563eb; /* ✅ Couleur au focus */
+  }
+  
+  .password-form button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .password-form button:hover {
+    background: #1d4ed8;
+  }
+  
+  /* ✅ Messages de succès et d'erreur */
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* ✅ Lien de retour */
+  .back-link {
+    display: block;
+    margin-top: 1rem;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  /* ================== PAGE MOTS DE PASS OUBLIER ================== */
+  
+  .forgot-password-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgb(255, 244, 244);
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forgot-password-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .forgot-password-form input {
+    width: 90%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #2563eb;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .forgot-password-form input:focus {
+    border-bottom-color: #1d4ed8;
+  }
+  
+  .forgot-password-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    background: #2563eb;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 2rem 0;
+  }
+  
+  .forgot-password-form button:hover {
+    background: #1d4ed8;
+  }
+  
+  

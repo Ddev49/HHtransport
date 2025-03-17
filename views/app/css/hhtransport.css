@@ -1,0 +1,96 @@
+
+/* ================== PAGE QUI SOMMES-NOUS ================== */
+
+.hh-about-container {
+    max-width: 90%;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 350px;
+  }
+  
+  .hh-about-header {
+    text-align: center;
+    background-color: #95b4f9;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hh-about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hh-about-header p {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  .hh-about-content {
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  .hh-about-content h2 {
+    font-size: 1.8rem;
+    color: #2563eb;
+  }
+  
+  .hh-about-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hh-about-values ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .hh-about-values li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .hh-about-values li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+  }
+  
+  .hh-about-team {
+    margin-top: 30px;
+  }
+  
+  .hh-team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .hh-team-member {
+    text-align: center;
+    margin: 10px;
+    flex-basis: 200px;
+  }
+  
+  .hh-team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hh-about-footer {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #95b4f9;
+    color: white;
+  }
+   

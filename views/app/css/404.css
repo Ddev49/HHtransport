@@ -1,0 +1,15 @@
+/* ================== PAGE 404 ================== */
+  .not-found-image {
+    max-width: 70%;
+    height: auto;
+    animation: moveTruck 3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes moveTruck {
+    from {
+      transform: translateX(-5px);
+    }
+    to {
+      transform: translateX(5px);
+    }
+  }

@@ -1,0 +1,317 @@
+
+/* ================== PAGE ACCUEIL ================== */
+/* ==========================
+   📜 CITATION (Fond vert foncé)
+=========================== */
+.home-sections{
+    display: flex;
+  }
+  .home-quote {
+    background: #0D3B32; /* Vert foncé */
+    color: white;
+    padding: 40px;
+    text-align: center;
+    max-width: 800px;
+    display: grid;
+    align-items: center; 
+  }
+  
+  .home-quote blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .quote-author {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* ==========================
+   📂 SERVICES AVEC TEXTE FONDU
+  =========================== */
+  .home-services {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* 🛠 Services flexibles : en ligne sur grand écran, colonne sur mobile */
+  .services-grid {
+    display: block;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .service-item {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* 🔘 Boutons */
+  .service-btn {
+    background: #1B5E20; /* Vert foncé */
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .service-btn:hover {
+    background: #71e395;
+  }
+  
+  /* ==========================
+   ✨ ANIMATION FONDU (Fade-in)
+  =========================== */
+  .service-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    background: #E6F4EA; /* Vert clair */
+    border-left: 5px solid #1B5E20; /* Bordure verte */
+    padding: 0 15px;
+    text-align: left;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  
+  .fade-in {
+    max-height: 250px;
+    opacity: 1;
+    padding: 15px;
+    transform: scaleY(1);
+  }
+  
+  .fade-out {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 15px;
+    transform: scaleY(0);
+  }
+  
+  /* ==========================
+   📱 RESPONSIVE DESIGN
+  =========================== */
+  @media (max-width: 900px) {
+    .services-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .home-sections{
+      display: block;
+    }
+  }
+  
+  /* ==========================
+     🌟 SERVICES CONTAINER
+  =========================== */
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+  }
+  
+  /* ==========================
+   📦 SERVICE CARD
+  =========================== */
+  .service-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* ==========================
+   🖼️ IMAGE SERVICE
+  =========================== */
+  .service-image {
+    width: 100%;
+    height: 100%;
+  }
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ==========================
+   📝 TEXTE SERVICE
+  =========================== */
+  .service-text-image {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .service-text-image h3 {
+    font-size: 1.5rem;
+    color: #1B5E20;
+    margin-bottom: 10px;
+  }
+  
+  .service-text-image p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  .contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: #edf8ee;
+  }
+  /* ==========================
+   📱 RESPONSIVE DESIGN
+  =========================== */
+  @media (min-width: 900px) {
+    .service-card {
+      max-height: 600px;
+    }
+  }
+  @media (max-width: 900px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+        max-width: 90%;
+    }
+  }
+  
+  /* ==========================
+     ⭐ SLIDER TÉMOIGNAGES
+  =========================== */
+  .testimonials-fond{
+    width: 100%;
+    background:#8bd287 ;
+  }
+  .testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+  }
+  
+  /* Contenu des témoignages */
+  .testimonial-content {
+    background: #d5f7de;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .testimonial-content p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-content span {
+    font-weight: bold;
+    color: #1B5E20; /* Vert foncé */
+  }
+  
+  /* Animation fondu */
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  /* Dots de navigation */
+  .slider-dots {
+    margin-top: 15px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 45%;
+    background: #A5D6A7; /* Vert clair */
+    border: none; /* Contour vert foncé */
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background: #4e8652; /* Vert foncé */
+  }
+  
+  
+  /* ==========================
+   🎯 HERO SECTION (BANNIÈRE)
+  =========================== */
+  .hero {
+    background: url('/images/accueil.webp') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+  @media (mIN-width: 1100px) {
+    .hero {
+      height: 100vh;
+      }
+  }
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.4s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: #0056b3;
+  }

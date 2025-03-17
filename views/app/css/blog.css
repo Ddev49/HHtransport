@@ -1,0 +1,194 @@
+
+/* ================== PAGE BLOGS ================== */
+
+/* ✅ Conteneur principal */
+.blogs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* ✅ Titre de la page */
+  .pages-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* ✅ Grille pour afficher les articles */
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  /* ✅ Carte d'article */
+  .blogs-card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  /* ✅ Effet au survol */
+  .blogs-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ✅ Titre d'article */
+  .blogs-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+  /* ✅ Date */
+  .blogs-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+  /* ✅ Contenu d'article (extrait) */
+  .blogs-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    word-wrap: break-word;
+  }
+  .blogs-intro {
+    font-size: 1.2rem;  /* Taille de police plus grande pour une meilleure lisibilité */
+    line-height: 1.6;  /* Espacement entre les lignes pour aérer le texte */
+    margin: 20px 0;  /* Espacement autour du texte */
+    color: #333;  /* Couleur de texte légèrement plus claire que le noir pour plus de douceur */
+    background-color: #f5fafb;  /* Fond léger pour contraster avec le texte */
+    padding: 15px;  /* Espace autour du texte pour l'aérer */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Ombre légère pour donner du relief */
+    font-family: 'Arial', sans-serif;  /* Choix de police lisible */
+  }
+  
+  /* ✅ Bouton "Voir plus" */
+  .blogs-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .blogs-button:hover {
+    background-color: #1e40af;
+  }
+  /* ================== BLOG PAGE ==================== */
+  .blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #e8f4fd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+  }
+  @media (max-width: 800px) {
+    .blog-container {
+      margin: 40px 15px;
+    }
+  }
+  
+  /* Titre du blog */
+  .blog-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+  /* Meta informations */
+  .blog-meta {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+  
+  /* Image principale */
+  .blog-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  /* Introduction */
+  .blog-intro {
+    font-size: 1.1rem;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+  
+  /* Section du blog */
+  .blog-section {
+    margin-top: 30px;
+  }
+  
+  .blog-subtitle {
+    font-size: 1.5rem;
+    color: #2563eb;
+    border-left: 4px solid #2563eb;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Liste */
+  .blog-list {
+    margin-top: 15px;
+  }
+  
+  .blog-list h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .blog-list ul {
+    list-style: square;
+    padding-left: 20px;
+  }
+  
+  .blog-list li {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  /* Image dans le contenu */
+  .blog-sub-image {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 6px;
+  }
+  
+  /* Messages d'erreur ou chargement */
+  .blog-error, .blog-loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: red;
+    margin-top: 50px;
+  }
+  

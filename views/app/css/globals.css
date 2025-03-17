@@ -1,0 +1,229 @@
+/* ================== BODY ================== */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+}
+body {
+  background-color: aliceblue; /* Gris clair */
+  color: #111827; /* Gris foncé */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.bold{
+  text-align: center;
+  font-weight: bold;
+}
+.btn-center{
+  display: block;
+  margin: 20px auto;
+}
+
+.main-container {
+  margin:0 auto;  
+  min-height: 60vw;/* Ajoute un peu d'espace autour */
+
+}
+/* ================== INFOBAR ================== */
+.info-bar {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-size: 16px;
+}
+.info-bar p{
+  margin:0;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  /*background-color:#2563eb; /* Par défaut bleu, mais modifiable */
+  color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/* Logo et slogan */
+.navbar-logo {
+  height: 4rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-links a:hover,.logout-btn:hover{
+  transform: scale(1.05); /* Grossir légèrement */
+}
+
+/* Bouton hamburger pour mobile */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu mobile */
+.navbar-mobile-menu {
+  display: none;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #2563eb;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+.navbar-mobile-menu a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s;
+}
+.navbar-mobile-menu  a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.hidden {
+  margin-top: 0.4rem;
+  padding-left: 0.7rem;
+}
+/* Responsive */
+@media (max-width: 1028px) {
+  .hidden {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-hamburger {
+    display: block;
+  }
+  .navbar-mobile-menu.active {
+    display: block;
+  }
+  .logout-btn{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 2.5rem;
+  }
+}
+/* ================== FOOTER ================== */
+.footer {
+  background-color: #2563eb; /* Gris foncé */
+  color: white;
+  width: 100%;
+  padding-top: 2rem ; /* Espacement interne */
+}
+
+.footer-container {
+  max-width: 100%; /* 1200px */
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Infos de l’entreprise */
+.footer-info {
+  flex: 1;
+  min-width: 10rem;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-info p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+/* Liens rapides */
+.footer-links {
+  flex: 1;
+  min-width: 10rem;
+}
+
+.footer-links h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #3b82f6; /* Bleu clair */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  background-color: #111827; /* Encore plus foncé */
+  padding: 0.5rem 0;
+  margin-top: 1.5rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+@media (max-width: 200px) {
+  .footer-info .footer-links {
+    width: 100%;
+  }
+}
