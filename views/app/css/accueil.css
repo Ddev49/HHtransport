@@ -15,6 +15,7 @@
   min-height: 400px;
   word-wrap: break-word;
   overflow: hidden;
+  max-height: 100vh;
 }
 .hero-content {
   max-width: 600px;

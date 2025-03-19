@@ -10,6 +10,12 @@ body {
   margin: 0;
   padding: 0;
 }
+.main-container {
+  margin:0 auto;  
+  min-height: 55vh;/* Ajoute un peu d'espace autour */
+  margin-top: 70px;
+}
+
 .bold{
   text-align: center;
   font-weight: bold;
@@ -17,13 +23,6 @@ body {
 .btn-center{
   display: block;
   margin: 20px auto;
-}
-
-.main-container {
-  margin:0 auto;  
-  min-height: 55vw;/* Ajoute un peu d'espace autour */
-  margin-top: 70px;
-
 }
 /* ================== INFOBAR ================== */
 .info-bar {
