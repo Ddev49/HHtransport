@@ -203,7 +203,7 @@
   
   .hh-why-item {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     background: #E6F4EA; /* Vert clair */
     padding: 15px;
     border-left: 5px solid #1B5E20; /* Bordure verte */

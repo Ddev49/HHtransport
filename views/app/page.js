@@ -1,7 +1,9 @@
 import "./css/accueil.css";
-import TestimonialsSlider from "@/components/accueil/TestimonialsSlider";
+
 import ImageText from "@/components/accueil/ImageText";
 import CitationText from "@/components/accueil/CitationText";  
+import PartenaireSection from "@/components/accueil/Partenaire";  
+import TestimonialsSlider from "@/components/accueil/TestimonialsSlider";
 
 const HomePage = () => {
     return (
@@ -15,7 +17,9 @@ const HomePage = () => {
             </section>
             <CitationText/>
             <ImageText/>
+            <PartenaireSection/>
             <TestimonialsSlider/>
+            
         </>
     );
 };

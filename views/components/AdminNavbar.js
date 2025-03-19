@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useSettings } from "@/context/SettingsContext";
@@ -48,9 +50,9 @@ const AdminNavbar = () => {
     <nav className="navbar"  style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
       <div className="navbar-container">
         <div className="flex items-center space-x-2">
-          <a href="/">
-            <img src="/hhlogo2.png" alt="Logo" className="navbar-logo" />
-          </a> 
+          <Link  href="/">
+            <Image src="/hhlogo2.webp" alt="Logo" className="navbar-logo" />
+          </Link > 
        </div>
 
         <div className="navbar-links">

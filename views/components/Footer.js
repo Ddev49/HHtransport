@@ -28,15 +28,6 @@ const Footer = () => {
             <li><Link href="/blogs">Blogs</Link></li>
           </ul>
         </div>
-        
-        {/* Infos de l'entreprise */}
-        <div className="footer-info">
-          <h3>{ title ? title : "H&H Transport"}</h3>
-          <p>Votre spécialiste en Déménagement et Transports De Marchandises.</p>
-          <p><strong>Adresse :</strong> {address ? address : "Angers 49100"}</p>
-          <p><strong>Email :</strong> {email ? email : "contact@hh-transports.com"}</p>
-          <p><strong>Téléphone :</strong> {phone ? phone : "+33 7 49 89 46 24"}</p>
-       </div>
 
         {/* Nos engagements */}
         <div className="footer-info">
@@ -46,6 +37,15 @@ const Footer = () => {
           <p>- Respect des délais</p>
           <p>- Solutions adaptées à votre budget</p>
         </div>
+
+        {/* Infos de l'entreprise */}
+        <div className="footer-info">
+          <h3>{ title ? title : "H&H Transport"}</h3>
+          <p>Votre spécialiste en Déménagement et Transports De Marchandises.</p>
+          <p><strong>Adresse :</strong> {address ? address : "Angers 49100"}</p>
+          <p><strong>Email :</strong> {email ? email : "contact@hh-transports.com"}</p>
+          <p><strong>Téléphone :</strong> {phone ? phone : "+33 7 49 89 46 24"}</p>
+       </div>
 
       </div>
 

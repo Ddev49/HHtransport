@@ -21,7 +21,8 @@ body {
 
 .main-container {
   margin:0 auto;  
-  min-height: 60vw;/* Ajoute un peu d'espace autour */
+  min-height: 55vw;/* Ajoute un peu d'espace autour */
+  margin-top: 70px;
 
 }
 /* ================== INFOBAR ================== */
@@ -37,11 +38,13 @@ body {
 
 /* ================== NAVBAR ================== */
 .navbar {
-  /*background-color:#2563eb; /* Par défaut bleu, mais modifiable */
+  background-color:rgb(3, 16, 43);; /* Par défaut bleu, mais modifiable */
   color: white;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   width: 100%;
   overflow: hidden;
+  z-index: 1;
+  position: fixed;
 }
 
 .navbar-container {
@@ -77,6 +80,7 @@ body {
 
 .navbar-links a:hover,.logout-btn:hover{
   transform: scale(1.05); /* Grossir légèrement */
+  color: #5daaaa;
 }
 
 /* Bouton hamburger pour mobile */
@@ -95,7 +99,7 @@ body {
   top: 70px;
   left: 0;
   width: 100%;
-  background: #2563eb;
+  background: rgb(31, 41, 55);
   transition: max-height 0.3s ease-in-out;
   overflow: hidden;
 }
@@ -130,6 +134,16 @@ body {
   }
 }
 @media (max-width: 850px) {
+  .hidden {
+    display: initial;
+  }
+}
+@media (max-width: 330px) {
+  .hidden {
+    display: none;
+  }
+}
+@media (max-width: 850px) {
   .navbar-links {
     display: none;
   }
@@ -147,7 +161,7 @@ body {
 }
 /* ================== FOOTER ================== */
 .footer {
-  background-color: #2563eb; /* Gris foncé */
+  background-color: rgb(31, 41, 55); /* Gris foncé */
   color: white;
   width: 100%;
   padding-top: 2rem ; /* Espacement interne */
@@ -167,7 +181,7 @@ body {
 /* Infos de l’entreprise */
 .footer-info {
   flex: 1;
-  min-width: 10rem;
+  min-width: 12rem;
 }
 
 .footer-info h3 {
@@ -183,7 +197,7 @@ body {
 /* Liens rapides */
 .footer-links {
   flex: 1;
-  min-width: 10rem;
+  min-width: 12rem;
 }
 
 .footer-links h3 {

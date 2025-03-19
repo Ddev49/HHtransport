@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 
@@ -73,7 +74,7 @@ const FormulesPage = () => {
       <div className="hh-cta">
         <h2>Transformez votre déménagement en un acte solidaire</h2>
         <p>Faites appel à notre service de débarras et offrez une nouvelle vie à vos objets. Ensemble, aidons ceux qui en ont besoin.</p>
-        <a href="/contact" className="admin-gestions-submit-btn btn-center">Nous contacter</a>
+        <Link href="/contact" className="admin-gestions-submit-btn btn-center">Nous contacter</Link>
       </div>
     </div>
   );

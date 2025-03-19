@@ -1,15 +1,34 @@
 /* ================== PAGE 404 ================== */
-  .not-found-image {
-    max-width: 70%;
-    height: auto;
-    animation: moveTruck 3s infinite alternate ease-in-out;
+.not-found{
+  background: #c29292;
+}
+.admin-gestions-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow:hidden ;
+  word-wrap: break-word;
+  margin-top: 100px;
+}
+.admin-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.admin-gestions-submit-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 50%;
+  font-size: 1rem;
+  padding: 12px;
+  background: #2563eb;
+}
+@media (max-width: 850px) {
+  .admin-gestions-container {
+    margin: 100px 15px 15px 15px;
+    padding: 5px;
   }
-  
-  @keyframes moveTruck {
-    from {
-      transform: translateX(-5px);
-    }
-    to {
-      transform: translateX(5px);
-    }
-  }
+}

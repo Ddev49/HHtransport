@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
         icons: {
             icon: "/favicon.ico",
             shortcut: "/favicon.ico",
-            apple: "/favicon-32x32.png",
+            apple: "/hh.png",
         },
     };
 }

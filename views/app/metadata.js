@@ -1,4 +1,4 @@
-export const metadataBase = new URL("https://hhtransport.com");
+export const metadataBase = new URL("https://h-htransports.com");
 const defaultImage = `${metadataBase}/images/default.jpg`;
 
 export function getPageMetadata(page, params = {}) {

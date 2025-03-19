@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useSettings } from "@/context/SettingsContext";
 
@@ -15,8 +16,8 @@ const Navbar = () => {
         {/* Logo + Slogan */}
         <div className="flex items-center space-x-2">
             <Link href="/">
-              <img src="/hhlogo2.png" alt="Logo" className="navbar-logo" />
-              <img src="/hhslogan2.png" alt="Slogan" className="navbar-logo hidden" />
+              <Image src="/hhlogo2.webp" alt="Logo" className="navbar-logo" />
+              <Image src="/hhslogan2.webp" alt="Slogan" className="navbar-logo hidden" />
             </Link>
         </div>
 

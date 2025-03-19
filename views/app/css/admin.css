@@ -125,15 +125,6 @@
   .read-blog{
     background: #f3f0ce;
   }
-  .engagement{
-    background:#e6f5d9; 
-  }
-  .admin-gestions-container.engagement .admin-title{
-  color: darkgreen;
-  }
-  .not-found{
-    background: #c29292;
-  }
   .blog-card {
     background: #e9f8f4;
     padding: 15px;

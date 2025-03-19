@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -66,7 +67,7 @@ export default function Login() {
           <button type="submit">Se connecter</button>
         </form>
         <p className="forgot-password">
-          <a href="/admin/reset-password">Mot de passe oublié ?</a>
+          <Link href="/admin/reset-password">Mot de passe oublié ?</Link>
         </p>
       </div>
     </div>

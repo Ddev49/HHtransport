@@ -1,6 +1,52 @@
 
 /* ================== PAGE ACCUEIL ================== */
 /* ==========================
+   🎯 HERO SECTION (BANNIÈRE)
+  =========================== */
+.hero {
+  background: url('/images/accueil.webp') center/cover no-repeat;
+  height: 70vW;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  min-height: 400px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+/* ==========================
    📜 CITATION (Fond vert foncé)
 =========================== */
 .home-sections{
@@ -177,7 +223,6 @@
   .contact {
     text-align: center;
     padding: 50px 20px;
-    background: #edf8ee;
   }
   /* ==========================
    📱 RESPONSIVE DESIGN
@@ -200,118 +245,185 @@
     }
   }
   
-  /* ==========================
-     ⭐ SLIDER TÉMOIGNAGES
+/* ==========================
+     ⭐ PARTENAIRES SECTION
   =========================== */
-  .testimonials-fond{
-    width: 100%;
-    background:#8bd287 ;
+/* === Style de base === */
+.partners {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #edf8ee;
+}
+
+.partners h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.partners p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Permet à l'élément de passer à la ligne si l'espace est trop petit */
+  position: relative;
+}
+
+.partner-item {
+  position: relative;
+}
+
+.partner-logo {
+  width: 200px;
+  height: auto;
+  transition: filter 0.3s ease;
+  border-radius: 20px;
+  margin-bottom: 20px; /* Ajout d'une marge sous chaque logo */
+}
+
+.partner-logo:hover {
+  filter: blur(4px);
+}
+/* === Texte au survol des logos === */
+.partner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  user-select: none;
+}
+
+.partner-item:hover .partner-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* === Media Queries pour les petits écrans === */
+@media (max-width: 768px) {
+  .partners h3 {
+      font-size: 1.5rem;
   }
-  .testimonials {
-    text-align: center;
-    padding: 50px 20px;
-    max-width: 600px;
-    margin: auto;
-    position: relative;
+
+  .partners p {
+      font-size: 1rem;
+      padding: 0 10px;
   }
-  
-  /* Contenu des témoignages */
-  .testimonial-content {
-    background: #d5f7de;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.5s ease-in-out;
+
+  .partners-logos {
+      gap: 20px;
+      justify-content: space-evenly;
   }
-  
-  .testimonial-content p {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 10px;
+
+  .partner-logo {
+      width: 130px;
   }
-  
-  .testimonial-content span {
-    font-weight: bold;
-    color: #1B5E20; /* Vert foncé */
+}
+
+/* Pour les écrans très petits (mobile portrait) */
+@media (max-width: 485px) {
+  .partners h3 {
+      font-size: 1.3rem;
   }
-  
-  /* Animation fondu */
-  .fade-in {
-    opacity: 1;
+
+  .partners p {
+      font-size: 0.9rem;
   }
-  
-  .fade-out {
-    opacity: 0;
+
+  .partners-logos {
+      gap: 10px;
   }
-  
-  /* Dots de navigation */
-  .slider-dots {
-    margin-top: 15px;
+
+  .partner-logo {
+      width: 100px;
   }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    margin: 5px;
-    border-radius: 45%;
-    background: #A5D6A7; /* Vert clair */
-    border: none; /* Contour vert foncé */
-    cursor: pointer;
+}
+
+/* Pour les écrans très petits (mobile portrait) */
+@media (max-width: 360px) {
+  .partner-logo {
+      width: 80px;
   }
-  
-  .dot.active {
-    background: #4e8652; /* Vert foncé */
-  }
-  
-  
-  /* ==========================
-   🎯 HERO SECTION (BANNIÈRE)
-  =========================== */
-  .hero {
-    background: url('/images/accueil.webp') center/cover no-repeat;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    min-height: 400px;
-    word-wrap: break-word;
-    overflow: hidden;
-  }
-  @media (mIN-width: 1100px) {
-    .hero {
-      height: 100vh;
-      }
-  }
-  .hero-content {
-    max-width: 600px;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    padding: 12px 25px;
-    font-size: 18px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.4s ease-in-out;
-  }
-  
-  .btn:hover {
-    background: #0056b3;
-  }
+}
+
+
+/* ==========================
+    ⭐ SLIDER TÉMOIGNAGES
+=========================== */
+.testimonials-fond {
+  width: 100%;
+  background: #8bd287;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+/* Contenu des témoignages */
+.testimonial-content {
+  background: #d5f7de;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Texte du témoignage */
+.testimonial-content p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial-content span {
+  font-weight: bold;
+  color: #1B5E20; /* Vert foncé */
+}
+
+/* Animation fondu */
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Dots de navigation */
+.slider-dots {
+  margin-top: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  border-radius: 45%;
+  background: #A5D6A7; /* Vert clair */
+  border: none; /* Contour vert foncé */
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #4e8652; /* Vert foncé */
+}

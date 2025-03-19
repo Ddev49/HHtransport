@@ -7,10 +7,10 @@ const ServicesSection = () => {
             {/* Service Déménagement */}
             <div className="service-card">
                 <div className="service-image">
-                    <Image src="/images/demenagement.webp" alt="Déménagement rapide" layout="responsive" width={800} height={600}  priority/>
+                    <Image src="/images/demenagement.webp" alt="Déménagement rapide"/>
                 </div>
                 <div className="service-text-image">
-                    <h3>Déménagement rapide ss et efficace</h3>
+                    <h3>Déménagement rapide et efficace</h3>
                     <p>
                         Nous vous proposons un service clé en main, adapté aux besoins
                         des particuliers et des professionnels. De l’emballage au
@@ -24,7 +24,7 @@ const ServicesSection = () => {
             {/* Service Livraison */}
             <div className="service-card">
                 <div className="service-image">
-                    <Image src="/images/livraison.webp" alt="Déménagement rapide" layout="responsive" width={800} height={600} priority/>
+                    <Image src="/images/livraison.webp" alt="Déménagement rapide"/>
                 </div>
                 <div className="service-text-image">
                     <h3>Livraison de marchandises sécurisée</h3>
@@ -41,7 +41,7 @@ const ServicesSection = () => {
             {/* Service Débarras */}
             <div className="service-card">
                 <div className="service-image">
-                    <Image src="/images/debaras.webp" alt="Déménagement rapide" layout="responsive" width={800} height={600}  priority/>
+                    <Image src="/images/debaras.webp" alt="Déménagement rapide" className="image"/>
                 </div>
                 <div className="service-text-image">
                     <h3>Débarras et recyclage responsable</h3>
@@ -55,14 +55,6 @@ const ServicesSection = () => {
                 </div>
             </div>
         </section>
-        <section className="contact">
-        <h2>Besoin d’un devis ?</h2>
-        <p>
-          Nos experts sont à votre écoute pour vous proposer la meilleure
-          solution.
-        </p>
-        <a href="/contact" className="btn">Nous Contacter</a>
-      </section>
       </>
     );
 };
