@@ -1,6 +1,9 @@
+# *
 User-agent: *
-Disallow: /admin/
-Disallow: /login
 Allow: /
 
-Sitemap: https://h-htransports.com/sitemap.xml
+# Host
+Host: https://h-htransport.com
+
+# Sitemaps
+Sitemap: https://h-htransport.com/sitemap.xml
