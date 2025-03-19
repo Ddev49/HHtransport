@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://h-htransport.com
+Host: https://h-htransports.com
 
 # Sitemaps
-Sitemap: https://h-htransport.com/sitemap.xml
+Sitemap: https://h-htransports.com/sitemap.xml

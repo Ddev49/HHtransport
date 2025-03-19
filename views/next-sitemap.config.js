@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://h-htransport.com',  // Ton domaine
+    siteUrl: 'https://h-htransports.com',  // Ton domaine
     generateRobotsTxt: true,  // Génère un fichier robots.txt
     exclude: [
       '/admin/*',      // Exclure toutes les pages sous /admin/
