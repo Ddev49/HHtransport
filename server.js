@@ -56,7 +56,7 @@ server.use((req, res, next) => {
   next();
 });
 server.use(express.urlencoded({ extended: true }));  // sert à analyser (parse) les données envoyées via un formulaire HTML (application/x-www-form-urlencoded) dans le req.body
-
+server.use(express.static(path.join(__dirname, "views",'public')));
 server.use("/_next/static",express.static(path.join(__dirname, "views",".next","static"), { maxAge: "365d" }));
 // Flavicon
 //app.use(favicon(path.join(__dirname, 'public','favicon','hh.ico')));
