@@ -100,10 +100,11 @@
     background: #e8f4fd;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     word-wrap: break-word;
+    margin-top: 100px;
   }
   @media (max-width: 800px) {
     .blog-container {
-      margin: 40px 15px;
+      margin: 100px 15px 15px 15px;
     }
   }
   
