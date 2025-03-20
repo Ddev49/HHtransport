@@ -1,5 +1,5 @@
 export const metadataBase = new URL("https://h-htransports.com");
-const defaultImage = `${metadataBase}/images/default.jpg`;
+const defaultImage = `${metadataBase}/images/default.webp`;
 
 export function getPageMetadata(page, params = {}) {
   const metadataConfig = {
@@ -12,7 +12,7 @@ export function getPageMetadata(page, params = {}) {
         description: "Nous facilitons votre déménagement tout en soutenant des actions solidaires grâce au recyclage de meubles et objets.",
         url: metadataBase.href,
         siteName: "H&H Transport",
-        images: [`${metadataBase}/images/og-image.jpg`, defaultImage],
+        images: [defaultImage],//`${metadataBase}/images/og-image.jpg`,
         locale: "fr_FR",
         type: "website",
       },
@@ -21,8 +21,9 @@ export function getPageMetadata(page, params = {}) {
         title: "H&H Transport - Déménagement & Livraison Écologique",
         description: "Optez pour un déménagement rapide, sécurisé et écologique avec H&H Transport.",
         site: "@HHTransport",
-        images: [`${metadataBase}/images/twitter-image.jpg`,defaultImage],
+        images: [defaultImage],//`${metadataBase}/images/twitter-image.jpg`,
       },
+      canonical: metadataBase.href,
     },
     contact: {
       title: "Contactez-nous - H&H Transport",
@@ -34,14 +35,15 @@ export function getPageMetadata(page, params = {}) {
         locale: "fr_FR",
         type: "website",
         url: `${metadataBase}/contact`,
-        images: [`${metadataBase}/images/contact.jpg`, defaultImage],
+        images: [defaultImage], //`${metadataBase}/images/contact.jpg`, 
       },
       twitter: {
         card: "summary_large_image",
         title: "Contactez-nous - H&H Transport",
         description: "Demandez un devis pour votre déménagement ou livraison dès aujourd'hui.",
-        images: [`${metadataBase}/images/contact.jpg`,defaultImage],
+        images: [defaultImage], //`${metadataBase}/images/contact.jpg`,
       },
+      canonical: `${metadataBase}/contact`,
     },
     formules: {
       title: "Nos Formules de Déménagement - H&H Transport",
@@ -53,14 +55,15 @@ export function getPageMetadata(page, params = {}) {
         locale: "fr_FR",
         type: "website",
         url: `${metadataBase}/formules`,
-        images: [`${metadataBase}/images/formules.jpg`, defaultImage],
+        images: [defaultImage], //`${metadataBase}/images/formules.jpg`,
       },
       twitter: {
         card: "summary_large_image",
         title: "Nos Formules de Déménagement - H&H Transport",
         description: "Comparez nos offres et choisissez la formule adaptée à votre déménagement.",
-        images: [`${metadataBase}/images/formules.jpg`,defaultImage],
+        images: [defaultImage],//`${metadataBase}/images/formules.jpg`,
       },
+      canonical: `${metadataBase}/formules`,
     },
     eco_depot: {
       title: "Éco Dépôt - H&H Transport",
@@ -71,15 +74,16 @@ export function getPageMetadata(page, params = {}) {
         description: "Nous récupérons vos objets et meubles inutilisés pour les redistribuer aux associations.",
         locale: "fr_FR",
         type: "website",
-        url: `${metadataBase}/eco-depot`,
-        images: [`${metadataBase}/images/eco-depot.jpg`, defaultImage],
+        url: `${metadataBase}/eco_depot`,
+        images: [defaultImage], //`${metadataBase}/images/eco-depot.jpg`, 
       },
       twitter: {
         card: "summary_large_image",
         title: "Éco Dépôt - H&H Transport",
         description: "Recyclez et donnez une seconde vie à vos meubles avec notre service écologique.",
-        images: [`${metadataBase}/images/eco-depot.jpg`,defaultImage],
+        images: [defaultImage], //`${metadataBase}/images/eco-depot.jpg`,
       },
+      canonical: `${metadataBase}/eco_depot`,
     },
     HHTransport: {
       title: "Qui sommes-nous ? - H&H Transport",
@@ -90,15 +94,16 @@ export function getPageMetadata(page, params = {}) {
         description: "En savoir plus sur notre mission et nos valeurs écoresponsables.",
         locale: "fr_FR",
         type: "website",
-        url: `${metadataBase}/qui-sommes-nous`,
-        images: [`${metadataBase}/images/qui-sommes-nous.jpg`, defaultImage],
+        url: `${metadataBase}/HHtransport`,
+        images: [defaultImage], //`${metadataBase}/images/qui-sommes-nous.jpg`, 
       },
       twitter: {
         card: "summary_large_image",
         title: "Qui sommes-nous ? - H&H Transport",
         description: "Découvrez notre mission et nos engagements pour un transport plus responsable.",
-        images: [`${metadataBase}/images/qui-sommes-nous.jpg`,defaultImage],
+        images: [defaultImage], //`${metadataBase}/images/qui-sommes-nous.jpg`,
       },
+      canonical:  `${metadataBase}/HHtransport`,
     },
     blogs: {
       title: "Nos Articles de Blog - H&H Transport",
@@ -110,14 +115,15 @@ export function getPageMetadata(page, params = {}) {
         type: "website",
         locale: "fr_FR",
         url: `${metadataBase}/blogs`,
-        images: [`${metadataBase}/images/blogs.jpg`, defaultImage],
+        images: [defaultImage], // `${metadataBase}/images/blogs.jpg`,
       },
       twitter: {
         card: "summary_large_image",
         title: "Nos Articles de Blog - H&H Transport",
         description: "Découvrez nos articles sur le transport, l'écologie et le déménagement.",
-        images: [`${metadataBase}/images/blogs.jpg`,defaultImage],
+        images: [defaultImage], //`${metadataBase}/images/blogs.jpg`,
       },
+      canonical:  `${metadataBase}/blogs`,
     },
     login: {
       title: "Connexion Administrateur - H&H Transport",
@@ -134,13 +140,13 @@ export function getPageMetadata(page, params = {}) {
         locale: "fr_FR",
         type: "website",
         url: `${metadataBase}/404`,
-        images: [`${metadataBase}/images/not-found.jpg`, defaultImage],
+        images: [ defaultImage], //`${metadataBase}/images/not-found.jpg`,
       },
       twitter: {
         card: "summary_large_image",
         title: "Page non trouvée - H&H Transport",
         description: "Nous ne trouvons pas la page demandée.",
-        images: [`${metadataBase}/images/not-found.jpg`,defaultImage],
+        images: [defaultImage],//`${metadataBase}/images/not-found.jpg`,
       },
     },
   };
@@ -157,7 +163,7 @@ export function getPageMetadata(page, params = {}) {
         locale: "fr_FR",
         type: "website",
         url: `${metadataBase}/formules/${params.id}`,
-        images: [`${metadataBase}/images/formules/${params.id}.jpg`, defaultImage],
+        images: [defaultImage],//`${metadataBase}/images/formules/${params.id}.jpg`, 
       },
     };
   }
@@ -174,7 +180,7 @@ export function getPageMetadata(page, params = {}) {
         locale: "fr_FR",
         type: "website",
         url: `${metadataBase}/blogs/${params.id}`,
-        images: [`${metadataBase}/images/blogs/${params.id}.jpg`, defaultImage],
+        images: [ defaultImage], //`${metadataBase}/images/blogs/${params.id}.jpg`,
       },
     };
   }
