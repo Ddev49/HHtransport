@@ -13,6 +13,7 @@
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   min-height: 400px;
+  width: 100%;
   word-wrap: break-word;
   overflow: hidden;
   max-height: 100vh;
@@ -253,7 +254,7 @@
 .partners {
   text-align: center;
   padding: 40px 20px;
-  background-color: #edf8ee;
+  background-color: #dcf6de;
 }
 
 .partners h3 {
@@ -264,7 +265,7 @@
 
 .partners p {
   font-size: 1.1rem;
-  color: #7f8c8d;
+  color: #3c4445;
   margin-bottom: 30px;
   max-width: 800px;
   margin-left: auto;
@@ -385,8 +386,10 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 /* Texte du témoignage */
@@ -406,19 +409,15 @@
   opacity: 1;
 }
 
-.fade-out {
-  opacity: 0;
-}
-
 /* Dots de navigation */
 .slider-dots {
   margin-top: 15px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  margin: 5px;
+  width: 15px;
+  height: 15px;
+  margin: 10px;
   border-radius: 45%;
   background: #A5D6A7; /* Vert clair */
   border: none; /* Contour vert foncé */

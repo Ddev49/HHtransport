@@ -7,7 +7,7 @@ const ServicesSection = () => {
             {/* Service Déménagement */}
             <div className="service-card">
                 <div className="service-image">
-                    <Image src="/images/demenagement.webp" alt="Déménagement rapide"/>
+                    <Image src="/images/demenagement.webp" alt="Services Déménagement"/>
                 </div>
                 <div className="service-text-image">
                     <h3>Déménagement rapide et efficace</h3>
@@ -24,7 +24,7 @@ const ServicesSection = () => {
             {/* Service Livraison */}
             <div className="service-card">
                 <div className="service-image">
-                    <Image src="/images/livraison.webp" alt="Déménagement rapide"/>
+                    <Image src="/images/livraison.webp" alt="Services Livraison"/>
                 </div>
                 <div className="service-text-image">
                     <h3>Livraison de marchandises sécurisée</h3>
@@ -41,7 +41,7 @@ const ServicesSection = () => {
             {/* Service Débarras */}
             <div className="service-card">
                 <div className="service-image">
-                    <Image src="/images/debaras.webp" alt="Déménagement rapide" className="image"/>
+                    <Image src="/images/debaras.webp" alt="Services Débarras" className="image"/>
                 </div>
                 <div className="service-text-image">
                     <h3>Débarras et recyclage responsable</h3>

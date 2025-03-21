@@ -8,15 +8,15 @@ const PartenaireSection = () => {
     <p>Nous sommes fiers de collaborer avec des partenaires de confiance qui partagent nos valeurs et notre engagement envers la qualité. Découvrez nos partenaires ci-dessous.</p>
     <div className="partners-logos">
         <div className="partner-item">
-            <Image src="/mairie.webp" alt="mairie" className="partner-logo"/>
+            <Image src="/mairie.webp" alt="Mairie d'Angers" className="partner-logo"/>
             <div className="partner-text">Mairie d'Angers</div>
         </div>
         <div className="partner-item">
-            <Image src="/aldev.webp" alt="aldev" className="partner-logo"/>
+            <Image src="/aldev.webp" alt="Aldev Angers" className="partner-logo"/>
             <div className="partner-text">Aldev Angers</div>
         </div>
         <div className="partner-item">
-            <Image src="/niah.webp" alt="niah" className="partner-logo"/>
+            <Image src="/niah.webp" alt="Niah Humanity" className="partner-logo"/>
             <div className="partner-text">Niah Humanity</div>
         </div>
     </div>
