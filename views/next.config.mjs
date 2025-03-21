@@ -4,7 +4,12 @@ const nextConfig = {
     compress: true,
     poweredByHeader: false,
     images: {
-      domains: ['h-htransports.com'], // Ajoutez votre domaine ici
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'h-htransports.com',
+        },
+      ],
     },
   };
   
