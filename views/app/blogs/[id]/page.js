@@ -2,6 +2,7 @@
 import { useEffect,useState  } from "react";
 import { useRouter, useParams } from "next/navigation";
 import axios from 'axios';
+import Link from "next/link";
 
 const BlogPage = () => {
   const router = useRouter();
@@ -75,6 +76,7 @@ const BlogPage = () => {
           </div>
         ))}
       </article>
+      <Link href="/blogs">Retourner au blogs</Link>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import { useSettings } from "@/context/SettingsContext";
 const Navbar = () => {
   const { navbarColor } = useSettings();
 
-
   return (
     <header class="header" style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
       {/* Logo + Slogan */}

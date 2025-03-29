@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 
 import axios from "axios";
+import Link from "next/link";
 
 const formules = {
     eco: {
@@ -136,6 +137,7 @@ const FormuleDetail = () => {
 
                 {/* 📜 Informations supplémentaires */}
                 <p className="hh-additional-info">{formule.additionalInfo}</p>
+                <Link href="/formules">Retourner au formules</Link>
             </div>
 
 
