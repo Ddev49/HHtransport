@@ -10,9 +10,9 @@ export async function generateMetadata() {
   return {
     ...getPageMetadata("home"),
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico",
-      apple: "/hh.png",
+      icon: [{ url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }],
+      shortcut: [{ url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }],
+      apple: [{ url: '/hh.png', sizes: '512x512', type: 'image/png' }], // idéalement 180x180 pour Apple
     },
   };
 }

@@ -129,7 +129,7 @@
     text-align: left;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: .4s ease-in-out;
   }
   
   .fade-in {
