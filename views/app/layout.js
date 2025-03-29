@@ -1,4 +1,5 @@
 import "./css/globals.css";
+import Script from 'next/script';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import InfoBar from "@/components/InfoBar";
@@ -23,7 +24,18 @@ export default function RootLayout({ children }) {
   return (
     <SettingsProvider> 
       <html lang="fr">
+        <head>
+          <Script async src={`https://www.googletagmanager.com/gtag/js?id=G-DDWC0VVTSW`} />
+          <Script id="google-analytics">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
+              gtag('config', 'G-DDWC0VVTSW');
+            `}
+          </Script>
+        </head>
         <body >
           <InfoBar />
           <Navbar />
