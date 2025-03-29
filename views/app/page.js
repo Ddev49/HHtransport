@@ -1,7 +1,7 @@
 import "./css/accueil.css";
 import ImageText from "@/components/accueil/ImageText";
 import CitationText from "@/components/accueil/CitationText";  
-import PartenaireSection from "@/components/accueil/Partenaire";  
+import PartenaireSection from "@/components/accueil/Partenaire";  //pas de partenaire pour le moment
 import TestimonialsSlider from "@/components/accueil/TestimonialsSlider";
 
 const HomePage = () => {
@@ -19,7 +19,6 @@ const HomePage = () => {
             </section>
             <CitationText/>
             <ImageText/>
-            <PartenaireSection/>
             <TestimonialsSlider/>
             
         </>

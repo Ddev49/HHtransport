@@ -8,7 +8,6 @@ import { useSettings } from "@/context/SettingsContext";
 import axios from "axios";
 
 const AdminNavbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -47,35 +46,26 @@ const AdminNavbar = () => {
   if (loading) return null; // Ne pas afficher la navbar tant que la vérification est en cours
 
   return isAuthenticated ? (
-    <nav className="navbar"  style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
-      <div className="navbar-container">
-        <div className="flex items-center space-x-2">
-          <Link  href="/">
-            <Image src="/hhlogo2.webp" alt="Logo" className="navbar-logo" />
-          </Link > 
-       </div>
-
-        <div className="navbar-links">
-          <Link href="/admin"> Tableau de Bord</Link>
-          <Link href="/admin/blogs"> Gestion des Blogs </Link>
-          <Link href="/admin/options"> Gestion des Options </Link>
-          <Link href="/admin/profil"> Profil</Link>
-          <button onClick={handleLogout} className="logout-btn">Déconnexion</button>
-        </div>
-
-        <button className="navbar-hamburger" onClick={() => setIsOpen(!isOpen)}>
-          ☰
-        </button>
+    <header class="header" style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
+      <div>
+        <Link href="/">
+          <Image src="/hhlogo2.webp" alt="Logo" className="navbar-logo" />
+        </Link > 
       </div>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <span id="menu-icon">☰</span>
+        <span id="close-icon">✕</span>
+      </label>
 
-      <div className={`navbar-mobile-menu ${isOpen ? "active" : ""}`} style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
-        <Link href="/admin" onClick={() => setIsOpen(false)}>Tableau de Bord</Link>
-        <Link href="/admin/blogs" onClick={() => setIsOpen(false)}>Gestion des Blogs</Link>
-        <Link href="/admin/options" onClick={() => setIsOpen(false)}>Gestion des Options</Link>
-        <Link href="/admin/profil" onClick={() => setIsOpen(false)}>Profil</Link>
-        <button onClick={handleLogout} className="logout-btn">Déconnexion</button>
-      </div>
-    </nav>
+      <nav className="navbar">
+        <Link href="/admin" style={{ "--i": 0 }}> Tableau de Bord</Link>
+        <Link href="/admin/blogs" style={{ "--i": 1 }}> Gestion des Blogs </Link>
+        <Link href="/admin/options" style={{ "--i": 2 }}> Gestion des Options </Link>
+        <Link href="/admin/profil" style={{ "--i": 3 }}> Profil</Link>
+        <button onClick={handleLogout} className="logout-btn" style={{ "--i": 4 }}>Déconnexion</button>
+      </nav>
+    </header>
   ) : null;
 };
 
