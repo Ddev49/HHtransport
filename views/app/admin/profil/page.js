@@ -60,7 +60,7 @@ export default function Admin() {
     }
 
     try {
-        await axios.patch("/api/admin/update", { username, email, phone, currentPassword, newPassword }, { withCredentials: true });
+        await axios.patch("/api/settings/update", { username, email, phone, currentPassword, newPassword }, { withCredentials: true });
         setSuccessMessage("Informations mises à jour avec succès !");
         setError("");
         setCurrentPassword(""); // Réinitialiser le champ mot de passe actuel

@@ -15,27 +15,37 @@ const QuiSommesNous = () => {
   const teamMembers = [
     {
       name: "Hissein Choua Barkai",
-      position: "Directeur Général",
+      position: "Responsable d'Exploitation",
       photo: null,//"/images/hissein-choua-barkai.jpg"
     },
     {
       name: "Abderahman Hissein",
-      position: "Directeur Général",
+      position: "Responsable Administrative",
       photo: null,//"/images/abderahman-hissein.jpg"
     },
     {
-      name: "Ahmed Ben Salah",
-      position: "Chef de Projet Transport",
+      name: "Jordan Jamet",
+      position: "Responsable Commercial",
       photo: null, //"/images/ahmed-ben-salah.jpg"
     },
     {
-      name: "Sophie Martin",
-      position: "Coordinatrice Service Client",
+      name: "Yassine Faouzi",
+      position: "Commercial",
+      photo: null, //"/images/ahmed-ben-salah.jpg"
+    },
+    {
+      name: "Kyllian Jamet",
+      position: "Démenageur",
       photo:null, //"/images/sophie-martin.jpg.jpg"
     },
     {
-      name: "Lucas Nguyen",
-      position: "Responsable Maintenance Flotte",
+      name: "Thomas Grison",
+      position: "Démenageur",
+      photo: null, //"/images/lucas-nguyen.jpg.jpg"
+    },
+    {
+      name: "Mamadou Toure",
+      position: "Démenageur",
       photo: null, //"/images/lucas-nguyen.jpg.jpg"
     },
   ];

@@ -26,7 +26,7 @@ const Navbar = () => {
           <Link href="/" style={{ "--i": 0 }}>Accueil</Link>
           <Link href="/formules" style={{ "--i": 1 }}>Formules</Link>
           <Link href="/contact" style={{ "--i": 2 }}>Contact</Link>
-          <Link href="/HHTransport" style={{ "--i": 3 }}>Qui somme_nous</Link>
+          <Link href="/HHTransport" style={{ "--i": 3 }}>Qui sommes-nous</Link>
           <Link href="/eco_depot" style={{ "--i": 4 }}>Eco depot</Link>
           <Link href="/blogs" style={{ "--i": 5 }}>Blogs</Link>
         </nav>
