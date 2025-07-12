@@ -109,7 +109,6 @@ body {
 .navbar a:hover,.logout-btn:hover{
   transform: scale(1.05); /* Grossir légèrement */
   color: #5daaaa;
-  background-color: rgb(255 255 255 / 5%);
 }
 
 .logout-btn{
@@ -159,6 +158,9 @@ body {
     transition: 0.3s ease;
     background-color:rgb(3, 16, 43); /* Par défaut bleu, mais modifiable */
 
+  }
+  .navbar a:hover,.logout-btn:hover{
+    background-color: rgb(255 255 255 / 5%);
   }
   #check:checked ~ .navbar {
     height: 16.4rem;
