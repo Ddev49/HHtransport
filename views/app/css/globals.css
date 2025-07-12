@@ -161,7 +161,7 @@ body {
 
   }
   #check:checked ~ .navbar {
-    height: 19.6rem;
+    height: 16.4rem;
   }
   .navbar a {
     display: block;

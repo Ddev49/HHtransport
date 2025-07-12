@@ -23,7 +23,7 @@ const Footer = () => {
             <li><Link href="/">Accueil</Link></li>
             <li><Link href="/formules">Formules</Link></li>
             <li><Link href="/contact">Contact </Link></li>
-            <li><Link href="/HHTransport">Qui sommes-nous</Link></li>
+            {/* <li><Link href="/HHTransport">Qui sommes-nous</Link></li> */}
             <li><Link href="/eco_depot">Eco Depôt</Link></li>
             <li><Link href="/blogs">Blogs</Link></li>
           </ul>
