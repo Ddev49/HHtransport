@@ -3,9 +3,13 @@
 import React, { useState, useEffect } from "react";
 
 const testimonials = [
-    { text: "Service de déménagement exceptionnel ! L’équipe était ponctuelle et très professionnelle.", author: "Sophie L." },
-    { text: "Un transport rapide et efficace, je recommande H&H Transports sans hésitation.", author: "Marc D." },
-    { text: "Des professionnels à l’écoute et un service irréprochable. Merci H&H Transports !", author: "Clara M." }
+
+  { text: "Service de déménagement exceptionnel ! L’équipe était très professionnelle.", author: "Sophie L." },
+  { text: "Un transport rapide et efficace, je recommande H&H Transports sans hésitation.", author: "Marc D." },
+  { text: "Des professionnels à l’écoute et un service irréprochable. Merci H&H Transports !", author: "Clara M." },
+  { text: "Organisation parfaite, personnel aimable et efficace. Je referai appel à vous sans hésiter.", author: "Nadia T." },
+  { text: "Un service de qualité, du premier contact jusqu’à la livraison. Merci à toute l’équipe !", author: "Julien R." },
+  { text: "Une expérience fluide et rassurante.", author: "Karim B." }
 ];
 
 const TestimonialsSlider = () => {

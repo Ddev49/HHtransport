@@ -1,13 +1,26 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+
 import { useSettings } from "@/context/SettingsContext";
 
 const Navbar = () => {
   const { navbarColor } = useSettings();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header class="header" style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`} style={navbarColor ?{ backgroundColor: navbarColor }:{}}>
       {/* Logo + Slogan */}
         <div>
             <Link href="/">
